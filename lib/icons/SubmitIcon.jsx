@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SubmitIcon = ({ size }) => (
+const SubmitIcon = ({ ...rest }) => (
   <svg
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 500 500"
+    width={21}
+    height={21}
+    fill="#444752"
+    viewBox="0 0 21 21"
+    {...rest}
   >
-    <g>
-      <g>
-        <polygon points="0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75" />
-      </g>
-    </g>
+    <path d="M4.213 9.84c-.284-.094-.286-.248.006-.345l10.388-3.467c.288-.096.453.065.373.347L12.01 16.777c-.081.288-.247.298-.37.024l-1.956-4.407 3.266-4.36-4.354 3.27L4.213 9.84z" />
   </svg>
 );
 
