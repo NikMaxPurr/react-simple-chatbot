@@ -104,7 +104,14 @@ class TextStep extends Component {
           isFirst={isFirst}
           isLast={isLast}
         >
-          {loading ? <Loading /> : this.renderMessage()}
+          {loading ? (
+            <Loading />
+          ) : (
+            <Content>
+              {this.renderMessage()}
+              <Time>time</Time>
+            </Content>
+          )}
         </Bubble>
       </TextStepContainer>
     );
