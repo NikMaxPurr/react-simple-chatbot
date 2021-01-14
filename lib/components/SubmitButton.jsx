@@ -20,11 +20,8 @@ const SubmitButton = styled.button`
   background: #e1dcfa;
   border-radius: 50%;
   transition: 0.3s ease-out;
-  padding-top: 13px;
-  padding-right: 24px;
   &:hover {
     background: #bfafe3;
-  }
 `;
 
 SubmitButton.defaultProps = {

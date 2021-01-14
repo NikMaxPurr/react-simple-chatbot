@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Bubble from './Bubble';
 import Image from './Image';
@@ -65,8 +66,22 @@ class TextStep extends Component {
 
     const showAvatar = user ? !hideUserAvatar : !hideBotAvatar;
 
-    const imageAltText = user ? "Your avatar" : `${botName}'s avatar`;
+    const imageAltText = user ? 'Your avatar' : `${botName}'s avatar`;
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
 
+    const Content = styled.div`
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    `;
+    const Time = styled.p`
+      margin-left: 24px;
+      color: #97909e;
+      font-size: 10px;
+      line-height: 18px;
+    `;
     return (
       <TextStepContainer className={`rsc-ts ${user ? 'rsc-ts-user' : 'rsc-ts-bot'}`} user={user}>
         <ImageContainer className="rsc-ts-image-container" user={user}>
@@ -89,7 +104,14 @@ class TextStep extends Component {
           isFirst={isFirst}
           isLast={isLast}
         >
-          {loading ? <Loading /> : this.renderMessage()}
+          {loading ? (
+            <Loading />
+          ) : (
+            <Content>
+              {this.renderMessage()}
+              <Time>{`${hours}:${minutes}`}</Time>
+            </Content>
+          )}
         </Bubble>
       </TextStepContainer>
     );
