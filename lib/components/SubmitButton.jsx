@@ -22,6 +22,7 @@ const SubmitButton = styled.button`
   transition: 0.3s ease-out;
   &:hover {
     background: #bfafe3;
+  }
 `;
 
 SubmitButton.defaultProps = {
