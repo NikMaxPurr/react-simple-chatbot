@@ -35,17 +35,17 @@ class OptionsStep extends Component {
 
     return (
       <Option key={value} className="rsc-os-option">
-        <OptionElement
-          className="rsc-os-option-element"
-          style={bubbleOptionStyle}
-          user={user}
-          onClick={() => this.onOptionClick({ value })}
-        >
-          <Content>
+        <Content>
+          <OptionElement
+            className="rsc-os-option-element"
+            style={bubbleOptionStyle}
+            user={user}
+            onClick={() => this.onOptionClick({ value })}
+          >
             {label}
-            <Time>{`${hours}:${minutes}`}</Time>
-          </Content>
-        </OptionElement>
+          </OptionElement>
+          <Time>{`${hours}:${minutes}`}</Time>
+        </Content>
       </Option>
     );
   };

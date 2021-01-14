@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import defaultTheme from '../../theme';
 
-const OptionElement = styled.div`
+const OptionElement = styled.button`
   background: ${({ theme }) => theme.botBubbleColor};
   border: 0;
   border-radius: 22px;
@@ -12,12 +12,11 @@ const OptionElement = styled.div`
   padding: 12px;
 
   &:hover {
-    background: #e1dcfa !important;
+    background: #e1dcfa;
   }
   &:active,
   &:hover:focus {
     outline: none;
-    background: #e1dcfa !important;
   }
 `;
 
