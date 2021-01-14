@@ -22,8 +22,6 @@ const SubmitButton = styled.button`
   transition: 0.3s ease-out;
   padding-top: 13px;
   padding-right: 24px;
-  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
-  opacity: ${props => (props.disabled && !props.invalid ? '.5' : '1')};
   &:hover {
     background: #bfafe3;
   }
