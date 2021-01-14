@@ -12,11 +12,11 @@ const OptionElement = styled.button`
   padding: 12px;
 
   &:hover {
-    opacity: 0.7;
+    background: #e1dcfa;
   }
   &:active,
   &:hover:focus {
-    outline:none;
+    outline: none;
   }
 `;
 
