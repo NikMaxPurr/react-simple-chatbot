@@ -28,7 +28,7 @@ class OptionsStep extends Component {
     `;
     const Time = styled.p`
       margin-left: 24px;
-      color: var(--gray7);
+      color: #97909e;
       font-size: 10px;
       line-height: 18px;
     `;
