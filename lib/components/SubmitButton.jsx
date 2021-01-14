@@ -20,6 +20,8 @@ const SubmitButton = styled.button`
   background: #e1dcfa;
   border-radius: 50%;
   transition: 0.3s ease-out;
+  opacity: ${props => (props.disabled && !props.invalid ? '.5' : '1')};
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   &:hover {
     background: #bfafe3;
   }
