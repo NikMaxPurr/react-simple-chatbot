@@ -738,7 +738,7 @@ ChatBot.propTypes = {
   controlStyle: PropTypes.objectOf(PropTypes.any),
   enableMobileAutoFocus: PropTypes.bool,
   enableSmoothScroll: PropTypes.bool,
-  extraControl: PropTypes.objectOf(PropTypes.any),
+  extraControl: PropTypes.objectOf(PropTypes.element),
   floating: PropTypes.bool,
   floatingIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   floatingStyle: PropTypes.objectOf(PropTypes.any),
