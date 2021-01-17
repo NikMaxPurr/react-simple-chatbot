@@ -107,10 +107,21 @@ class TextStep extends Component {
           {loading ? (
             <Loading />
           ) : (
-            <Content>
+            <div
+              style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}
+            >
               {this.renderMessage()}
-              <Time>{`${hours}:${minutes}`}</Time>
-            </Content>
+              <span
+                style={{
+                  marginLeft: '24px',
+                  color: '#97909e',
+                  fontSize: '10px',
+                  lineHeight: '18px'
+                }}
+              >
+                {`${hours}:${minutes}`}
+              </span>
+            </div>
           )}
         </Bubble>
       </TextStepContainer>
