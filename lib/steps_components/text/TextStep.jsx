@@ -92,6 +92,21 @@ class TextStep extends Component {
 
     const imageAltText = user ? 'Your avatar' : `${botName}'s avatar`;
 
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    const Content = styled.div`
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    `;
+    const Time = styled.p`
+      margin-left: 24px;
+      color: #97909e;
+      font-size: 10px;
+      line-height: 18px;
+    `;
     return (
       <TextStepContainer className={`rsc-ts ${user ? 'rsc-ts-user' : 'rsc-ts-bot'}`} user={user}>
         <ImageContainer className="rsc-ts-image-container" user={user}>
@@ -114,7 +129,14 @@ class TextStep extends Component {
           isFirst={isFirst}
           isLast={isLast}
         >
-          {loading ? <Loading /> : <MessageWrapper message={this.renderMessage()} />}
+          {loading ? (
+            <Loading />
+          ) : (
+            <>
+              {this.renderMessage()}
+              <Time>{`${hours}:${minutes}`}</Time>
+            </>
+          )}
         </Bubble>
       </TextStepContainer>
     );
